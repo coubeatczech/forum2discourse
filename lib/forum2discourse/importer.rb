@@ -46,7 +46,7 @@ class Forum2Discourse::Importer
   def import_topic_posts(discourse_topic, posts)
     posts.each do |post|
       user = discourse_user(post.user)
-      data = post.serialize.merge({topic_id: discourse_topic.id})
+      data = post.serialize.merge({topic_id: discourse_topic.id, import_mode: true})
       PostCreator.new(discourse_user(post.user), data).create
     end
     log "  Imported #{posts.size} posts"

@@ -81,7 +81,7 @@ class Forum2Discourse::Importer
     min_topic_title_length: 1,
     title_min_entropy: nil,
     body_min_entropy: nil,
-    max_word_length: 65535,
+    title_max_word_length: 512,
     newuser_spam_host_threshold: 65535,
     newuser_max_links: 65535,
     newuser_max_images: 65535,

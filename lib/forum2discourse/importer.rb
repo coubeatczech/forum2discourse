@@ -39,7 +39,7 @@ class Forum2Discourse::Importer
 
   def find_or_create_category(user, category)
     unless @categories.include? category
-      @categories << Category.create_with(user: user).find_or_create_by_name(category)
+      @categories << Category.create_with(user: user).find_or_create_by(name: category)
     end
   end
 

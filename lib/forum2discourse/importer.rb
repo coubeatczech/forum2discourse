@@ -89,7 +89,9 @@ class Forum2Discourse::Importer
     max_mentions_per_post: 65535,
     min_post_length: 1,
     unique_posts_mins: 0,
-    allow_duplicate_topic_titles: true
+    allow_duplicate_topic_titles: true,
+    max_username_length: 50,
+    min_username_length: 2
   }
 
   def reset_settings_to(originals)

@@ -15,8 +15,8 @@ class Forum2Discourse::Models::Discourse::User < Forum2Discourse::Models::Discou
   # Discourse has a username limit of 15 characters.
   def serialize
     super.tap do |data|
-      if data[:username].length > 15
-        puts "Truncating username '#{data[:username]}' as >15 characters" 
+      if data[:username].length > 50
+        puts "Truncating username '#{data[:username]}' as >50 characters" 
         data[:username] = data[:username][0..14]
       end
     end

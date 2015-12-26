@@ -13,7 +13,7 @@ class Forum2Discourse::Models::PunBB::User
 
   def to_discourse
     Forum2Discourse::Models::Discourse::User.new({
-      username: username,
+      username: email.tr('@','_').tr('-','_').tr('.','_'),
       email: email,
       name: realname
     })
